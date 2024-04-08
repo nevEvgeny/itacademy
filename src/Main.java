@@ -1,5 +1,6 @@
 public class Main {
     public static void main(String[] args) {
+        int abc = 55;
 
         Car newcar = new Car();
         newcar.gearboxtype();
