@@ -1,13 +1,17 @@
-public class Car implements GearBox {
+public class Car{
+    String model;
+    int modelnumber;
 
+    public Car(String model, int modelnumber) {
+        this.model = model;
+        this.modelnumber = modelnumber;
+    }
+    // Override toString
     @Override
-    public void gearboxtype() {
-        System.out.println("Automatic");
+    public String toString() {
+        return model + " " + modelnumber;
     }
 
-    @Override
-    public void speedtransmission() {
-        int r = 10;
-        System.out.println(r + "speed transmission");
-    }
 }
+
+

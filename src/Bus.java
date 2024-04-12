@@ -1,22 +1,13 @@
-public class Bus implements Fuel, EngineInfo {
+public class Bus {
+    int doornumber;
 
-    @Override
-    public void fuelconsumption() {
-        System.out.println("35 liters / 100 km");
+    public Bus(int doornumber) {
+        this.doornumber = doornumber;
     }
-
+    // Override equals
     @Override
-    public void fueltype() {
-        System.out.println("Disel");
-    }
-
-    @Override
-    public void valvemodel() {
-        System.out.println("Skk180");
-    }
-
-    @Override
-    public  void engineDesign() {
-        System.out.println("valves per cylinder is 4");
+    public boolean equals(Object obj) {
+        Bus otherBus = (Bus) obj;
+        return this.doornumber == otherBus.doornumber;
     }
 }
